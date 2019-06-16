@@ -1,4 +1,9 @@
 # SpringBoot整合Dubbo
+### 微服务面临的四个问题
+1. 这么多服务客户端如何访问(API网关)
+2. 服务与服务之间如何通信(rpc/http)
+3. 多服务如何管理（zk/redis...）
+4. 服务挂了怎么办（熔断）
 ### 分支管理
 1. master 主分支为最终案例项目
 2. feature/1.1 分支为最简单的入门案例
@@ -17,7 +22,6 @@
 2. 在需用开启熔断提供者方法上添加@HystrixCommand
 3. 服务消费者的调用方法上添加@HystrixCommand(fallbackMethod = "fallbackMethod"),并配置熔断方法
 4. 服务提供者和服务消费者启动类添加@EnableHystrix开启熔断
-
 
 ### 启动步骤
 1. 先启动zookeeper
