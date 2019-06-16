@@ -1,4 +1,7 @@
-# SpringBoot整合Dubbo如何案例
+# SpringBoot整合Dubbo入门案例
+### 分支管理
+1. feature/1.1分支为最简单的入门案例
+2. master 主分支为最终案例项目
 ### 启动步骤
 1. 先启动zookeeper
 2. 启动服务提供者
