@@ -17,7 +17,7 @@
     - 被序列化的类应当实现java.io.Serializable接口
     - 提供无参构造方法
     - 底层会透明的将Java的原生序列化替换成kyro序列化
-    
+ 
 ### 使用Hystrix实现服务熔断
 1. 服务提供者和消费者添加依赖
 2. 在需用开启熔断提供者方法上添加@HystrixCommand
@@ -37,6 +37,14 @@
 ### dubbo直连
 1. 通过@Reference注解的url属性指定服务地址，可直接找到对应主机的远程服务，而不用再找注册中心
 2. url配置为 ip:port
+ 
+ ### 负载均衡
+ - 负载均衡策略
+    1. RandomLoadBalance 随机调用
+    2. RoundRobinLoadBlance 轮询调用
+    3. LeastActiveLoadBlance 最少活跃数调用
+    4. ConsistentHashLoadBalance 一致性Hash
+ - 在@Reference配置loadbalance属性
  
 ### 启动步骤
 1. 先启动zookeeper

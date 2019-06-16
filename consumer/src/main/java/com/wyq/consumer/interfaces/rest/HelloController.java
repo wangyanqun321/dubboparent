@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @Reference(retries = 3, timeout = 3000, version = "1.0.2",
-            stub = "com.wyq.consumer.interfaces.dubbo.HelloServiceStau")
+            stub = "com.wyq.consumer.interfaces.dubbo.HelloServiceStau", loadbalance="roundrobin")
     private HelloService helloService;
 
     @GetMapping("/hello")
